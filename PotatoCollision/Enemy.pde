@@ -29,7 +29,6 @@ class Enemy {
     PVector desired = PVector.sub(target, location);
     PVector steer = new PVector();
     float distance = desired.mag();
-    println(distance);
     if (distance > 2 * radius) {
       if (distance < 100) {
         desired.setMag(map(distance, 0, 100, 0, maxSpeed));
@@ -75,5 +74,11 @@ class Enemy {
   
   void draw() {
     ellipse(location.x, location.y, 2 * radius, 2 * radius);
+    
+    PVector velDirection = new PVector(velocity.x, velocity.y);
+    velDirection.setMag(50);
+    
+    PVector direction = PVector.add(location, velDirection);
+    line(location.x, location.y, direction.x, direction.y);
   }
 }

@@ -23,6 +23,10 @@ void draw() {
   } //<>//
 }
 
+void mouseClicked() {
+  enemies.add(new Enemy(mouseX, mouseY));
+}
+
 void keyPressed() {
   if (keyCode == UP) { player.up_ = true; }
   if (keyCode == RIGHT) { player.right_ = true; }
