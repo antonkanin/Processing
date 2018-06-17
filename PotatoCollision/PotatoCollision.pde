@@ -5,8 +5,8 @@ void setup() {
   size(800, 600);
   enemies = new ArrayList<Enemy>();
   enemies.add(new Enemy(100, 100));
-  enemies.add(new Enemy(300, 300));
-  enemies.add(new Enemy(500, 500));
+  enemies.add(new Enemy(200, 100));
+  enemies.add(new Enemy(300, 100));
   player = new Player();
 }
 

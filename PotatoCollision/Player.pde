@@ -4,6 +4,7 @@ class Player {
   boolean down_ = false;
   boolean left_ = false;
   boolean right_ = false;
+  float radius = 25;
   
   int speed_ = 5;
   
@@ -19,6 +20,7 @@ class Player {
   }
   
   void draw() {
-    ellipse(location.x, location.y, 50, 50);
+    fill(255, 0, 0);
+    ellipse(location.x, location.y, 2 * radius, 2 * radius);
   }
 }
